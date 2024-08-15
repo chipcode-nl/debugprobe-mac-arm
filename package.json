@@ -1,0 +1,42 @@
+{
+  "name": "debugprobe-mac-arm",
+  "displayName": "OpenOCD for Raspberry Pi Debugprobe on macOS Arm CPU",
+  "description": "OpenOCD for Raspberry Pi Debugprobe on macOS Arm CPU",
+  "icon": "images/Raspberry_Debugprobe_512.png",
+  "version": "1.0.0",
+  "preview": false,
+  "publisher": "chipcode-nl",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "OpenOCD configuration",
+      "properties": {
+        "openocd.bin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:HOME}/.vscode/extensions/chipcode-nl.debugprobe-mac-arm-1.0.0/bin",
+          "description": "The path OpenOCD."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chipcode-nl/debugprobe-mac-arm.git"
+  },
+  "license": "GPL-2.0",
+  "scripts": {
+    "postinstall": "~/.vscode/extensions/chipcode-nl.debugprobe-mac-arm-1.0.0/symlink.sh"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0"
+  }
+}
